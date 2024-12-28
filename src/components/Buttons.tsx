@@ -24,9 +24,7 @@ export default function componentName({
       onMouseLeave={() => setIsHover(false)}
     >
       {icon && icon}
-      <p style={{ ...textFontStyles.body.bodyLargeRegular, color: fgColor }}>
-        {name}
-      </p>
+      <p style={{ ...textFontStyles.body.bodyLargeRegular }}>{name}</p>
     </Container>
   );
 }
@@ -37,8 +35,5 @@ const Container = styled.button`
   align-items: center;
   padding: 10px 30px;
   border-radius: 30px;
-  font-family: "Roboto", sans-serif;
   gap: 12px;
-  p {
-  }
 `;

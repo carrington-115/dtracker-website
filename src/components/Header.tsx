@@ -13,17 +13,17 @@ export default function componentName() {
   return (
     <Container>
       <img src="/images/full-logo.svg" alt="logo" />
-      <section>
+      <nav>
         {headerLinks.map((elementProps: linkType, index) => (
           <LinkElement {...elementProps} key={index} />
         ))}
-      </section>
+      </nav>
       <div className="btns-container">
         {[
           {
             name: "Waitlist",
-            fgColor: "transparent",
-            bgColor: "#000000",
+            fgColor: colors.onPrimaryContainer,
+            bgColor: "transparent",
             action: () => router.push("/"),
             hbgColor: colors.primaryContainer,
             hfgColor: colors.onPrimaryContainer,
@@ -56,6 +56,12 @@ const Container = styled.header`
   align-items: center;
   height: fit-content;
   .btns-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  nav {
     display: flex;
     gap: 20px;
     align-items: center;

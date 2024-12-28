@@ -17,7 +17,6 @@ interface btnsType {
 
 interface fontSpecificType {
   fontSize: number;
-  lineHeight: number;
 }
 
 interface textFontStylesTypes {
