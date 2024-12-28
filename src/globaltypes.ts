@@ -10,11 +10,12 @@ interface btnsType {
   name: string;
   bgColor: string;
   fgColor: string;
+  hbgColor: string;
+  hfgColor: string;
   action: () => void;
 }
 
 interface fontSpecificType {
-  fontFamily: string;
   fontSize: number;
   lineHeight: number;
 }

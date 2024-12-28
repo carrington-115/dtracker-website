@@ -1,10 +1,11 @@
 "use client";
 import styled from "styled-components";
+import { Header } from "@/components";
 
 export default function Home() {
   return (
     <Container>
-      <h1>Hello World</h1>
+      <Header />
     </Container>
   );
 }
