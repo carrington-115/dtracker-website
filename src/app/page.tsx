@@ -9,6 +9,11 @@ export default function Home() {
       <Hero />
       <FeaturesSection />
       <WorkElement />
+      <section className="money-section">
+        <h1>
+          How do I make Money on <strong>DTRACKER</strong>
+        </h1>
+      </section>
     </Container>
   );
 }

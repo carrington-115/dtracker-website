@@ -43,6 +43,13 @@ interface worksType {
   agent: boolean;
 }
 
+interface moneyComponentTypes {
+  image: string;
+  content: string;
+  bgColor: string;
+  fgColor: string;
+}
+
 export type {
   linkType,
   btnsType,
@@ -50,4 +57,5 @@ export type {
   textFontStylesTypes,
   cardsElementType,
   worksType,
+  moneyComponentTypes,
 };
