@@ -59,6 +59,7 @@ const Container = styled.section`
     gap: 20px;
     h1 {
       line-height: normal;
+      font-weight: bold;
     }
   }
   .btns-container {
