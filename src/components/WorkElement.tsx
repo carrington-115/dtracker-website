@@ -7,7 +7,7 @@ import { colors, textFontStyles } from "@/styles";
 
 export default function componentName() {
   return (
-    <Container>
+    <Container id="how-it-works">
       <h1
         style={{
           ...textFontStyles.display.displayMediumBold,

@@ -22,15 +22,15 @@ const headerLinks: linkType[] = [
   },
   {
     name: "How it works",
-    link: "/how-it-works",
+    link: "/#how-it-works",
   },
   {
     name: "Agents",
-    link: "/agents",
+    link: "/#agents",
   },
   {
     name: "Benefits",
-    link: "/benefits",
+    link: "/#benefits",
   },
 ];
 
