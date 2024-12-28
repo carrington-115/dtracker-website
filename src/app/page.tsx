@@ -1,7 +1,12 @@
+"use client";
+import styled from "styled-components";
+
 export default function Home() {
   return (
-    <div>
+    <Container>
       <h1>Hello World</h1>
-    </div>
+    </Container>
   );
 }
+
+const Container = styled.section``;

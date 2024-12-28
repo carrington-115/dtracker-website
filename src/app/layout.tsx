@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Roboto } from "next/font/google";
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-roboto",
-});
+import { roboto } from "@/constants";
 
 export const metadata: Metadata = {
-  title: "Home",
-  description: "DTRACKER Landing Page",
+  title: "DTRACKER",
+  description:
+    "Explore an all-in-one platform designed to simplify waste management, empower local agents, and foster a greener planet. From tracking waste to creating economic opportunities, DTRACKER transforms the way individuals and businesses handle recycling and sustainability.",
 };
 
 export default function RootLayout({
@@ -23,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="../assets/logo.png" />
+        <link rel="icon" href="/images/logo.png" />
       </head>
       <body className={`${roboto.variable} antialiased`}>{children}</body>
     </html>
