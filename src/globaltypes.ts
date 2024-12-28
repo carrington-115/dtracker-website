@@ -36,10 +36,18 @@ interface cardsElementType {
   actionLink: string;
 }
 
+interface worksType {
+  contentImage: string;
+  title: string;
+  stepsContent: { title: string; step: string }[];
+  agent: boolean;
+}
+
 export type {
   linkType,
   btnsType,
   fontSpecificType,
   textFontStylesTypes,
   cardsElementType,
+  worksType,
 };

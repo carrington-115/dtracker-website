@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import { FeaturesSection, Header, Hero } from "@/components";
+import { FeaturesSection, Header, Hero, WorkElement } from "@/components";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
       <Header />
       <Hero />
       <FeaturesSection />
+      <WorkElement />
     </Container>
   );
 }
