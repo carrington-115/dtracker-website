@@ -22,7 +22,7 @@ export default function componentName() {
       <div className="btns-container">
         {[
           {
-            name: "Waitlist",
+            name: "Join the Waitlist",
             fgColor: colors.onPrimaryContainer,
             bgColor: "transparent",
             action: () => router.push("/"),
@@ -35,7 +35,7 @@ export default function componentName() {
             bgColor: colors.primaryColor,
             action: () => router.push("/"),
             hbgColor: colors.onPrimaryContainer,
-            hfgColor: colors.primaryContainer,
+            hfgColor: "#ffffff",
           },
         ].map((props, index) => (
           <Buttons {...props} key={index} />

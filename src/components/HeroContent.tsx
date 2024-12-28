@@ -30,7 +30,7 @@ export default function componentName() {
             bgColor: colors.primaryColor,
             action: () => router.push("/"),
             hbgColor: colors.onPrimaryContainer,
-            hfgColor: colors.primaryContainer,
+            hfgColor: "#ffffff",
           },
           {
             name: "Join the Waitlist",
