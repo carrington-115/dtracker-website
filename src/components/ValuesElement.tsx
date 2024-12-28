@@ -14,10 +14,23 @@ export default function componentName({
     <Container>
       <img src={icon} alt="value icon" />
       <div className="inner-container">
-        <h3 style={{ ...textFontStyles.headline.headlineSmallBold }}>
+        <h3
+          style={{
+            ...textFontStyles.headline.headlineSmallBold,
+            lineHeight: "normal",
+            fontWeight: "bold",
+          }}
+        >
           {title}
         </h3>
-        <p style={{ ...textFontStyles.title.titleMediumRegular }}>{content}</p>
+        <p
+          style={{
+            ...textFontStyles.title.titleMediumRegular,
+            lineHeight: "normal",
+          }}
+        >
+          {content}
+        </p>
       </div>
     </Container>
   );
@@ -31,9 +44,11 @@ const Container = styled.div`
   .inner-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     h3,
     p {
       text-align: center;
+      line-height: normal;
     }
   }
 `;

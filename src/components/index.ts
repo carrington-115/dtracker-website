@@ -7,6 +7,7 @@ import WorkElement from "./WorkElement";
 import MoneyComponent from "./MoneyComponent";
 import ValuesElement from "./ValuesElement";
 import ValuesSection from "./ValuesSection";
+import MoneySection from "./MoneySection";
 
 export {
   Buttons,
@@ -18,4 +19,5 @@ export {
   MoneyComponent,
   ValuesElement,
   ValuesSection,
+  MoneySection,
 };
