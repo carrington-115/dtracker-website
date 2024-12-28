@@ -8,7 +8,7 @@ import FeaturesCard from "./FeaturesCard";
 
 export default function componentName() {
   return (
-    <Container>
+    <Container id="features-section">
       <div className="title-content">
         <h1
           style={{

@@ -3,6 +3,7 @@
 interface linkType {
   name: string;
   link: string;
+  id?: string;
 }
 
 interface btnsType {

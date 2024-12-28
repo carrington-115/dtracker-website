@@ -14,11 +14,11 @@ const roboto = Roboto({
 const headerLinks: linkType[] = [
   {
     name: "Home",
-    link: "/",
+    link: "/#",
   },
   {
     name: "Features",
-    link: "/features",
+    link: "/#features-section",
   },
   {
     name: "How it works",

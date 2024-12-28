@@ -14,6 +14,14 @@ export default function componentName() {
   const [isClient, setIsClient] = useState<boolean>(false);
   const router = useRouter();
 
+  const setSmoothNavigation = (linkId: string) => {
+    const id = linkId.slice(1);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollPos(window.scrollY);
@@ -47,7 +55,11 @@ export default function componentName() {
       <img src="/images/full-logo.svg" alt="logo" />
       <nav>
         {headerLinks.map((elementProps: linkType, index) => (
-          <LinkElement {...elementProps} key={index} />
+          <LinkElement
+            action={setSmoothNavigation(elementProps.link)}
+            {...elementProps}
+            key={index}
+          />
         ))}
       </nav>
       <div className="btns-container">
@@ -76,13 +88,20 @@ export default function componentName() {
   );
 }
 
-const LinkElement = ({ link, name }: linkType) => {
+interface linkElementType {
+  link: string;
+  name: string;
+  action: any;
+}
+
+const LinkElement = ({ link, name, action }: linkElementType) => {
   const location = usePathname();
 
   return (
     <LinkContainer
       href={link}
       style={{ fontWeight: location == link ? "bold" : "normal" }}
+      onClick={action}
     >
       {name}
     </LinkContainer>
