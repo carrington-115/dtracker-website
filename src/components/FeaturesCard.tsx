@@ -21,10 +21,23 @@ export default function componentName({
     >
       <img src={imgLink} alt="image link" />
       <div className="content">
-        <h3 style={{ ...textFontStyles.headline.headlinemediumBold }}>
+        <h3
+          style={{
+            ...textFontStyles.headline.headlineMediumBold,
+            fontWeight: "bold",
+            lineHeight: "normal",
+          }}
+        >
           {title}
         </h3>
-        <p style={{ ...textFontStyles.title.titleLargeRegular }}>{body}</p>
+        <p
+          style={{
+            ...textFontStyles.title.titleLargeRegular,
+            lineHeight: "normal",
+          }}
+        >
+          {body}
+        </p>
       </div>
     </Container>
   );
@@ -34,6 +47,12 @@ const Container = styled(Link)`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 30px;
+  border-radius: 30px;
+  align-items: center;
+  img {
+    width: 80%;
+  }
   .content {
     display: flex;
     flex-direction: column;

@@ -1,8 +1,10 @@
 "use client";
 
+import { cardsData } from "@/constants";
 import { colors, textFontStyles } from "@/styles";
 import React from "react";
 import styled from "styled-components";
+import FeaturesCard from "./FeaturesCard";
 
 export default function componentName() {
   return (
@@ -36,7 +38,11 @@ export default function componentName() {
           individuals and businesses handle recycling and sustainability.
         </p>
       </div>
-      <div className="contents-cards"></div>
+      <div className="contents-cards">
+        {cardsData.map((props, index) => (
+          <FeaturesCard key={index} {...props} />
+        ))}
+      </div>
     </Container>
   );
 }
@@ -58,5 +64,12 @@ const Container = styled.section`
       text-align: center;
       line-height: normal;
     }
+  }
+  .contents-cards {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
   }
 `;

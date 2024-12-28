@@ -61,4 +61,4 @@ const cardsData: cardsElementType[] = [
   },
 ];
 
-export { roboto, headerLinks };
+export { roboto, headerLinks, cardsData };
