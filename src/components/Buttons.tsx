@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { btnsType } from "@/globaltypes";
+import { textFontStyles } from "@/constants";
 
 export default function componentName({
   icon,
@@ -18,7 +19,9 @@ export default function componentName({
       onClick={action}
     >
       {icon && icon}
-      <p>{name}</p>
+      <p style={{ ...textFontStyles.body.bodyLargeRegular, color: fgColor }}>
+        {name}
+      </p>
     </Container>
   );
 }
@@ -29,4 +32,6 @@ const Container = styled.button`
   align-items: center;
   padding: 10px 30px;
   border-radius: 30px;
+  p {
+  }
 `;
