@@ -13,4 +13,17 @@ interface btnsType {
   action: () => void;
 }
 
-export type { linkType, btnsType };
+interface fontSpecificType {
+  fontFamily: string;
+  fontSize: number;
+  lineHeight: number;
+}
+
+interface textFontStylesTypes {
+  display: Record<string, fontSpecificType>;
+  headline: Record<string, fontSpecificType>;
+  title: Record<string, fontSpecificType>;
+  body: Record<string, fontSpecificType>;
+}
+
+export type { linkType, btnsType, fontSpecificType, textFontStylesTypes };
