@@ -65,6 +65,7 @@ const Container = styled.header`
   padding: 20px 90px;
   align-items: center;
   height: fit-content;
+  border-bottom: 0.3px solid rgba(0, 0, 0, 0.1);
   .btns-container {
     display: flex;
     gap: 20px;
