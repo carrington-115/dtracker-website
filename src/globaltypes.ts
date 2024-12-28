@@ -33,7 +33,6 @@ interface cardsElementType {
   bgColor: string;
   fgColor: string;
   actionLink: string;
-  type: string;
 }
 
 export type {
