@@ -15,7 +15,7 @@ export default function componentName({
     <Container>
       <img src={image} alt="image element" />
       <div style={{ backgroundColor: bgColor }}>
-        <p style={{ ...textFontStyles.body.bodyLargeRegular, color: fgColor }}>
+        <p style={{ ...textFontStyles.body.bodyLargeMedium, color: fgColor }}>
           {content}
         </p>
       </div>

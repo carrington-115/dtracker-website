@@ -1,7 +1,7 @@
 // types files
 
 import { Roboto } from "next/font/google";
-import { cardsElementType, linkType } from "./globaltypes";
+import { cardsElementType, linkType, moneyComponentTypes } from "./globaltypes";
 import { colors } from "./styles";
 
 const roboto = Roboto({
@@ -61,4 +61,35 @@ const cardsData: cardsElementType[] = [
   },
 ];
 
-export { roboto, headerLinks, cardsData };
+const moneyElements: moneyComponentTypes[] = [
+  {
+    image: "/images/image-1.png",
+    content:
+      "Complete waste pickup or recycling tasks assigned to you via the platform.",
+    bgColor: colors.primaryContainer,
+    fgColor: colors.onPrimaryContainer,
+  },
+  {
+    image: "/images/image-2.png",
+    content:
+      "Efficiency Bonuses: Achieve higher ratings and faster completion times to unlock performance-based incentives.",
+    bgColor: colors.SecondaryContainer,
+    fgColor: colors.onSecondaryContainer,
+  },
+  {
+    image: "/images/image-3.png",
+    content:
+      "Recyclables Trade Income: Facilitate the buying and selling of recyclable materials within your network and earn commission.",
+    bgColor: colors.tertiaryContainer,
+    fgColor: colors.onTertiaryContainer,
+  },
+  {
+    image: "/images/image-4.png",
+    content:
+      "Flexible Payments: Get paid securely through the app with transparent transaction records and instant payouts.",
+    bgColor: "#E6E6E6",
+    fgColor: "#000000",
+  },
+];
+
+export { roboto, headerLinks, cardsData, moneyElements };
