@@ -1,7 +1,12 @@
 // types files
 
 import { Roboto } from "next/font/google";
-import { cardsElementType, linkType, moneyComponentTypes } from "./globaltypes";
+import {
+  cardsElementType,
+  linkType,
+  moneyComponentTypes,
+  valueElementtypes,
+} from "./globaltypes";
 import { colors } from "./styles";
 
 const roboto = Roboto({
@@ -92,4 +97,31 @@ const moneyElements: moneyComponentTypes[] = [
   },
 ];
 
-export { roboto, headerLinks, cardsData, moneyElements };
+const valueContents: valueElementtypes[] = [
+  {
+    icon: "/images/icons/bin.svg",
+    title: "Simplified Waste management",
+    content:
+      " Easily schedule, track, and manage your waste pickups and recycling tasks with just a few clicks",
+  },
+  {
+    icon: "/images/icons/sustainability.svg",
+    title: "Environmental Impact",
+    content:
+      "Contribute to a greener planet by reducing waste, promoting recycling, and minimizing environmental footprints.",
+  },
+  {
+    icon: "/images/icons/job.svg",
+    title: "Empower Local Communities",
+    content:
+      "Our platform connects individuals with agents, creating job opportunities and fostering local economic growth.",
+  },
+  {
+    icon: "/images/icons/solutions.svg",
+    title: "Comprehensive Solutions",
+    content:
+      "Whether you’re a business or an individual, DTracker offers tailored solutions to meet your waste management needs.",
+  },
+];
+
+export { roboto, headerLinks, cardsData, moneyElements, valueContents };

@@ -50,6 +50,12 @@ interface moneyComponentTypes {
   fgColor: string;
 }
 
+interface valueElementtypes {
+  icon: string;
+  title: string;
+  content: string;
+}
+
 export type {
   linkType,
   btnsType,
@@ -58,4 +64,5 @@ export type {
   cardsElementType,
   worksType,
   moneyComponentTypes,
+  valueElementtypes,
 };

@@ -5,6 +5,8 @@ import HeroContent from "./HeroContent";
 import FeaturesSection from "./FeaturesSection";
 import WorkElement from "./WorkElement";
 import MoneyComponent from "./MoneyComponent";
+import ValuesElement from "./ValuesElement";
+import ValuesSection from "./ValuesSection";
 
 export {
   Buttons,
@@ -14,4 +16,6 @@ export {
   FeaturesSection,
   WorkElement,
   MoneyComponent,
+  ValuesElement,
+  ValuesSection,
 };
