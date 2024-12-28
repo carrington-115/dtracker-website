@@ -1,7 +1,7 @@
 "use client";
 import { linkType } from "@/globaltypes";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { headerLinks } from "@/constants";
 import { Buttons } from ".";
@@ -9,10 +9,41 @@ import { useRouter, usePathname } from "next/navigation";
 import { colors } from "@/styles";
 
 export default function componentName() {
+  const [scrollPos, setScrollPos] = useState<number>(0);
+  const [scrolling, setScrolling] = useState<boolean>(false);
+  const [isClient, setIsClient] = useState<boolean>(false);
   const router = useRouter();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPos(window.scrollY);
+      setScrolling(scrollPos > 50);
+    };
+    if (typeof window !== undefined) {
+      handleScroll();
+    }
+    if (typeof window !== undefined) {
+      window.addEventListener("scroll", handleScroll);
+    }
+    setIsClient(true);
+  }, [scrollPos, scrolling]);
+
+  if (!isClient) return null;
+
   return (
-    <Container>
+    <Container
+      style={{
+        transition: scrolling
+          ? "all 1s 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275)"
+          : "none",
+        background: scrolling ? "rgba(255, 255, 255, 0.50)" : "white",
+        backdropFilter: "blur(5px)",
+        position: scrolling ? "sticky" : "relative",
+        top: 0,
+        right: 0,
+        left: 0,
+      }}
+    >
       <img src="/images/full-logo.svg" alt="logo" />
       <nav>
         {headerLinks.map((elementProps: linkType, index) => (
