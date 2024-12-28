@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { Buttons } from ".";
 import { colors, textFontStyles } from "@/styles";
 import { useRouter } from "next/navigation";
-import { color } from "motion/react";
 
 export default function componentName() {
   const router = useRouter();

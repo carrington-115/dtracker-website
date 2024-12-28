@@ -26,4 +26,20 @@ interface textFontStylesTypes {
   body: Record<string, fontSpecificType>;
 }
 
-export type { linkType, btnsType, fontSpecificType, textFontStylesTypes };
+interface cardsElementType {
+  imgLink: string;
+  title: string;
+  body: string;
+  bgColor: string;
+  fgColor: string;
+  actionLink: string;
+  type: string;
+}
+
+export type {
+  linkType,
+  btnsType,
+  fontSpecificType,
+  textFontStylesTypes,
+  cardsElementType,
+};
