@@ -5,11 +5,12 @@ import React from "react";
 import styled from "styled-components";
 import { headerLinks } from "@/constants";
 import { Buttons } from ".";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { colors } from "@/styles";
 
 export default function componentName() {
   const router = useRouter();
+
   return (
     <Container>
       <img src="/images/full-logo.svg" alt="logo" />
@@ -45,7 +46,16 @@ export default function componentName() {
 }
 
 const LinkElement = ({ link, name }: linkType) => {
-  return <LinkContainer href={link}>{name}</LinkContainer>;
+  const location = usePathname();
+
+  return (
+    <LinkContainer
+      href={link}
+      style={{ fontWeight: location == link ? "bold" : "normal" }}
+    >
+      {name}
+    </LinkContainer>
+  );
 };
 
 const Container = styled.header`
@@ -68,4 +78,8 @@ const Container = styled.header`
   }
 `;
 
-const LinkContainer = styled(Link)``;
+const LinkContainer = styled(Link)`
+  &:hover {
+    font-weight: bold;
+  }
+`;
