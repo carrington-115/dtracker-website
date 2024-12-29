@@ -8,6 +8,7 @@ import MoneyComponent from "./MoneyComponent";
 import ValuesElement from "./ValuesElement";
 import ValuesSection from "./ValuesSection";
 import MoneySection from "./MoneySection";
+import WaitlistSection from "./WaitlistSection";
 
 export {
   Buttons,
@@ -20,4 +21,5 @@ export {
   ValuesElement,
   ValuesSection,
   MoneySection,
+  WaitlistSection,
 };

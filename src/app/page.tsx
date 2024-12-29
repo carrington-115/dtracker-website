@@ -7,6 +7,7 @@ import {
   MoneyComponent,
   MoneySection,
   ValuesSection,
+  WaitlistSection,
   WorkElement,
 } from "@/components";
 
@@ -19,6 +20,7 @@ export default function Home() {
       <WorkElement />
       <MoneySection />
       <ValuesSection />
+      <WaitlistSection />
     </Container>
   );
 }
