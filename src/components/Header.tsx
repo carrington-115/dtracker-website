@@ -45,7 +45,7 @@ export default function componentName() {
           ? "all 1s 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275)"
           : "none",
         background: scrolling ? "rgba(255, 255, 255, 0.50)" : "white",
-        backdropFilter: "blur(5px)",
+        backdropFilter: "blur(10px)",
         position: scrolling ? "sticky" : "relative",
         top: 0,
         right: 0,
