@@ -10,6 +10,7 @@ import ValuesSection from "./ValuesSection";
 import MoneySection from "./MoneySection";
 import WaitlistSection from "./WaitlistSection";
 import PartnerSection from "./PartnerSection";
+import DemoSection from "./DemoSection";
 
 export {
   Buttons,
@@ -24,4 +25,5 @@ export {
   MoneySection,
   WaitlistSection,
   PartnerSection,
+  DemoSection,
 };

@@ -1,10 +1,10 @@
 "use client";
 import styled from "styled-components";
 import {
+  DemoSection,
   FeaturesSection,
   Header,
   Hero,
-  MoneyComponent,
   MoneySection,
   PartnerSection,
   ValuesSection,
@@ -23,6 +23,7 @@ export default function Home() {
       <ValuesSection />
       <WaitlistSection />
       <PartnerSection />
+      <DemoSection />
     </Container>
   );
 }

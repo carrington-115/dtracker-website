@@ -54,9 +54,6 @@ const Container = styled.section`
       gap: 50px;
       justify-items: center;
       align-items: center;
-      img {
-        opacity: 70%;
-      }
     }
   }
 `;
