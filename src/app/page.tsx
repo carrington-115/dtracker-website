@@ -6,6 +6,7 @@ import {
   Hero,
   MoneyComponent,
   MoneySection,
+  PartnerSection,
   ValuesSection,
   WaitlistSection,
   WorkElement,
@@ -21,6 +22,7 @@ export default function Home() {
       <MoneySection />
       <ValuesSection />
       <WaitlistSection />
+      <PartnerSection />
     </Container>
   );
 }
