@@ -53,6 +53,18 @@ const Container = styled.section`
   gap: 40px;
   width: 40%;
 
+  @media (min-width: 320px) and (max-width: 599px) {
+    width: 90%;
+    .btns-container {
+      width: 100%;
+      justify-content: space-around;
+    }
+    .content {
+      h1 {
+        font-size: 45px;
+      }
+    }
+  }
   .content {
     display: inherit;
     flex-direction: column;
@@ -67,18 +79,5 @@ const Container = styled.section`
     display: flex;
     align-items: center;
     gap: 20px;
-  }
-
-  @media (min-width: 320px) and (max-width: 599px) {
-    width: 90%;
-    .btns-container {
-      width: 100%;
-      justify-content: space-around;
-    }
-    .content {
-      h1 {
-        font-size: 45px;
-      }
-    }
   }
 `;

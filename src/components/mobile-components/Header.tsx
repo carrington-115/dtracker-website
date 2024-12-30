@@ -10,13 +10,13 @@ export default function componentName() {
   const [isClient, setIsClient] = useState<boolean>(false);
   const router = useRouter();
 
-  const setSmoothNavigation = (linkId: string) => {
-    const id = linkId.slice(1);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const setSmoothNavigation = (linkId: string) => {
+  //   const id = linkId.slice(1);
+  //   const element = document.getElementById(id);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   useEffect(() => {
     const handleScroll = () => {
