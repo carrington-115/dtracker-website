@@ -45,7 +45,6 @@ export default function componentName() {
         right: 0,
         left: 0,
         top: 0,
-        width: "100vw",
       }}
     >
       <img src="/images/full-logo.svg" alt="logo" />
@@ -62,15 +61,15 @@ const Container = styled.header`
     display: none;
   }
   display: flex;
-  width: 100%;
   justify-content: space-between;
-  padding: 20px 15px;
   border-bottom: 0.3px solid rgba(0, 0, 0, 0.1);
-
+  padding: 15px 20px;
   .menu-icon {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
+    justify-content: center;
     span {
       width: 50px;
       height: 5px;
