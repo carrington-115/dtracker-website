@@ -72,4 +72,14 @@ const Container = styled.section`
     align-items: center;
     gap: 20px;
   }
+
+  @media (min-width: 320px) and (max-width: 599px) {
+    .contents-cards {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .title-content {
+      width: 90%;
+    }
+  }
 `;

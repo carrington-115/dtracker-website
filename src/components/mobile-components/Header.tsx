@@ -44,6 +44,7 @@ export default function componentName() {
         backdropFilter: "blur(10px)",
         right: 0,
         left: 0,
+        top: 0,
         width: "100vw",
       }}
     >
