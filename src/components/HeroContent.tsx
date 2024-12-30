@@ -10,11 +10,11 @@ export default function componentName() {
   return (
     <Container>
       <div className="content">
-        <h1 style={{ ...textFontStyles.display.displayLargeBold }}>
+        <h1>
           Transform{" "}
           <strong style={{ color: colors.primaryColor }}>
-            Waste Management
-          </strong>{" "}
+            Waste Management{" "}
+          </strong>
           with Ease
         </h1>
         <p style={{ ...textFontStyles.title.titleLargeRegular }}>
@@ -52,6 +52,7 @@ const Container = styled.section`
   flex-direction: column;
   gap: 40px;
   width: 40%;
+
   .content {
     display: inherit;
     flex-direction: column;
@@ -59,11 +60,25 @@ const Container = styled.section`
     h1 {
       line-height: normal;
       font-weight: bold;
+      font-size: 57px;
     }
   }
   .btns-container {
     display: flex;
     align-items: center;
     gap: 20px;
+  }
+
+  @media (min-width: 320px) and (max-width: 599px) {
+    width: 90%;
+    .btns-container {
+      width: 100%;
+      justify-content: space-around;
+    }
+    .content {
+      h1 {
+        font-size: 45px;
+      }
+    }
   }
 `;

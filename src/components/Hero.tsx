@@ -22,4 +22,13 @@ const Container = styled.section`
   img {
     width: 55%;
   }
+  @media (min-width: 320px) and (max-width: 599px) {
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 0px 7px;
+    gap: 60px;
+    img {
+      width: 100%;
+    }
+  }
 `;
