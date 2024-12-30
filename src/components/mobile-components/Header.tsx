@@ -10,13 +10,13 @@ export default function componentName() {
   const [isClient, setIsClient] = useState<boolean>(false);
   const router = useRouter();
 
-  // const setSmoothNavigation = (linkId: string) => {
-  //   const id = linkId.slice(1);
-  //   const element = document.getElementById(id);
-  //   if (element) {
-  //     element.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
+  const setSmoothNavigation = (linkId: string) => {
+    const id = linkId.slice(1);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,9 +42,9 @@ export default function componentName() {
           : "none",
         background: scrolling ? "rgba(255, 255, 255, 0.50)" : "white",
         backdropFilter: "blur(10px)",
-        top: 0,
         right: 0,
         left: 0,
+        width: "100vw",
       }}
     >
       <img src="/images/full-logo.svg" alt="logo" />
