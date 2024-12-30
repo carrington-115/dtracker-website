@@ -40,7 +40,6 @@ interface worksType {
   contentImage: string;
   title: string;
   stepsContent: { title: string; step: string }[];
-  agent: boolean;
 }
 
 interface moneyComponentTypes {

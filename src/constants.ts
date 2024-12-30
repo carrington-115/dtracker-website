@@ -124,4 +124,54 @@ const valueContents: valueElementtypes[] = [
   },
 ];
 
-export { roboto, headerLinks, cardsData, moneyElements, valueContents };
+const userSteps = [
+  {
+    title: "Sign Up",
+    step: "Create your account in minutes by providing basic details and verifying your email or phone number.",
+  },
+  {
+    title: "Connect with Local Agents",
+    step: "Use our app to find verified agents or recyclers nearby for easy waste collection or recycling services.",
+  },
+  {
+    title: "Schedule and manage Pickups",
+    step: "Set pickup times, track the status of your request, and make payments directly through the app.",
+  },
+  {
+    title: "Track Progress",
+    step: "View your waste management history, get recycling insights, and see your contribution to a greener environment.",
+  },
+];
+
+const agentSteps = [
+  {
+    title: "Register as an agent",
+    step: "Sign up to become a DTracker agent by filling out the agent application form and providing necessary documents.",
+  },
+  {
+    title: "Verification and Onboarding",
+    step: "Complete our simple verification process and attend a short onboarding session to learn how to use the platform.",
+  },
+  {
+    title: "Access leads and Jobs",
+    step: "Get notified about waste collection and recycling opportunities in your area through the app.",
+  },
+  {
+    title: "Earn and Track income",
+    step: "Manage your earnings directly on the platform with built-in financial tools to help you grow your business.",
+  },
+  {
+    title: "Build your Reputation",
+    step: "Deliver excellent service and receive ratings and reviews to attract more clients.",
+  },
+];
+
+export {
+  roboto,
+  headerLinks,
+  cardsData,
+  moneyElements,
+  valueContents,
+  userSteps,
+  agentSteps,
+};

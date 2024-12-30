@@ -9,12 +9,9 @@ export default function componentName({
   contentImage,
   title,
   stepsContent,
-  agent,
 }: worksType) {
   return (
-    <Container
-      style={{ display: "flex", flexDirection: agent ? "row-reverse" : "row" }}
-    >
+    <Container style={{ display: "flex" }}>
       <img src={contentImage} alt="content image" />
       <div className="content">
         <h2
@@ -104,6 +101,14 @@ const Container = styled.section`
           flex-direction: column;
         }
       }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 599px) {
+    flex-direction: column;
+    width: 90%;
+    img {
+      width: 85%;
     }
   }
 `;
