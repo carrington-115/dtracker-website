@@ -28,7 +28,7 @@ export default function componentName({
         </h2>
         <div className="grid-steps">
           {stepsContent.map(({ title, step }, index) => (
-            <div className="step-style">
+            <div className="step-style" key={index}>
               <span
                 style={{
                   display: "flex",
