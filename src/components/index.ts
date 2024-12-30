@@ -11,6 +11,7 @@ import MoneySection from "./MoneySection";
 import WaitlistSection from "./WaitlistSection";
 import PartnerSection from "./PartnerSection";
 import DemoSection from "./DemoSection";
+import MobileHeader from "./mobile-components/Header";
 
 export {
   Buttons,
@@ -26,4 +27,5 @@ export {
   WaitlistSection,
   PartnerSection,
   DemoSection,
+  MobileHeader,
 };

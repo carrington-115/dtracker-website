@@ -5,6 +5,7 @@ import {
   FeaturesSection,
   Header,
   Hero,
+  MobileHeader,
   MoneySection,
   PartnerSection,
   ValuesSection,
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <Container>
       <Header />
+      <MobileHeader />
       <Hero />
       <FeaturesSection />
       <WorkElement />

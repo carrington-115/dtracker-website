@@ -50,6 +50,7 @@ export default function componentName() {
         top: 0,
         right: 0,
         left: 0,
+        padding: scrolling ? "10px 90px" : "20px 90px",
       }}
     >
       <img src="/images/full-logo.svg" alt="logo" />
@@ -112,10 +113,12 @@ const Container = styled.header`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 20px 90px;
   align-items: center;
   height: fit-content;
   border-bottom: 0.3px solid rgba(0, 0, 0, 0.1);
+  @media (min-width: 320px) and (max-width: 599px) {
+    display: none;
+  }
   .btns-container {
     display: flex;
     gap: 20px;
