@@ -75,4 +75,14 @@ const Container = styled.section`
       width: 65%;
     }
   }
+
+  @media (min-width: 320px) and (max-width: 599px) {
+    .inner-container {
+      flex-direction: column;
+      gap: 20px;
+      img {
+        width: 100%;
+      }
+    }
+  }
 `;

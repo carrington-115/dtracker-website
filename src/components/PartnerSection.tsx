@@ -56,4 +56,13 @@ const Container = styled.section`
       align-items: center;
     }
   }
+
+  @media (min-width: 320px) and (max-width: 599px) {
+    .inner-section {
+      width: 90%;
+      .inner-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
 `;

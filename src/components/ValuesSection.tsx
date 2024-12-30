@@ -11,7 +11,6 @@ export default function componentName() {
     <Container id="benefits">
       <h1
         style={{
-          ...textFontStyles.display.displayMediumBold,
           fontWeight: "bold",
         }}
       >
@@ -34,9 +33,25 @@ const Container = styled.section`
   padding: 50px 0px;
   gap: 40px;
   width: 100%;
+  h1 {
+    font-size: 45px;
+  }
   .values-container {
     width: 80%;
     display: flex;
     gap: 50px;
+  }
+
+  @media (min-width: 320px) and (max-width: 599px) {
+    h1 {
+      font-size: 32px;
+      text-align: center;
+    }
+    .values-container {
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
   }
 `;

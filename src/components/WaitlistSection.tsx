@@ -50,7 +50,7 @@ export default function componentName() {
               A Greener Future
             </li>
           </ul>
-          <section style={{ margin: "10px 0px", width: "100%" }}>
+          <section className="btn-container">
             <Buttons
               name="Join the Waitlist"
               bgColor={colors.primaryColor}
@@ -80,6 +80,7 @@ const Container = styled.section`
     justify-content: space-between;
     align-items: center;
     color: ${colors.onPrimaryContainer};
+
     .content {
       display: flex;
       flex-direction: column;
@@ -87,6 +88,25 @@ const Container = styled.section`
       ul {
         li {
           list-style-type: disc;
+        }
+      }
+      .btn-container {
+        margin: "10px 0px";
+        width: 100%;
+      }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 599px) {
+    padding: 50px 0px;
+    .inner-container {
+      flex-direction: column;
+      width: 80%;
+      gap: 52px;
+      .content {
+        width: 100%;
+        .btn-container {
+          margin-top: 30px;
         }
       }
     }
