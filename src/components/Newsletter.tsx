@@ -3,19 +3,33 @@
 import { colors, textFontStyles } from "@/styles";
 import React, { useState } from "react";
 import styled from "styled-components";
+import { setDoc, doc, getFirestore, serverTimestamp } from "firebase/firestore";
+import app from "@/firebase/firebase.config";
 
 export default function componentName() {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
+  const db = getFirestore(app);
+  const subscribersList = doc(db, "subscribers");
 
-  const handleSubmitNewsletter = ({
+  const handleSubmitNewsletter = async ({
     name,
     email,
+    timeStamp,
   }: {
     name: string;
     email: string;
+    timeStamp?: any;
   }) => {
-    // do something
+    try {
+      await setDoc(
+        subscribersList,
+        { name, email, timeStamp },
+        { merge: true }
+      );
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   return (
@@ -39,7 +53,13 @@ export default function componentName() {
           </div>
           <form
             action=""
-            onSubmit={() => handleSubmitNewsletter({ name, email })}
+            onSubmit={() =>
+              handleSubmitNewsletter({
+                name,
+                email,
+                timeStamp: serverTimestamp,
+              })
+            }
           >
             <input
               type="text"

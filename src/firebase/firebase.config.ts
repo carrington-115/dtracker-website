@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA5TddTUBC7JQi1Wv6IQTyiZuJbbp7tCKQ",
+  apiKey: process.env.FIREBASE_API,
   authDomain: "dtracker-df0cc.firebaseapp.com",
   projectId: "dtracker-df0cc",
   storageBucket: "dtracker-df0cc.appspot.com",
@@ -11,5 +11,4 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
 export default app;
