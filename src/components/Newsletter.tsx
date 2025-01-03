@@ -81,4 +81,16 @@ const Container = styled.section`
       }
     }
   }
+
+  @media (min-width: 320px) and (max-width: 599px) {
+    .inner-container {
+      width: 90%;
+      flex-direction: column;
+      gap: 50px;
+      .content,
+      form {
+        width: 100%;
+      }
+    }
+  }
 `;
