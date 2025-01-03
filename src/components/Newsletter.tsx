@@ -52,7 +52,6 @@ export default function componentName() {
             </p>
           </div>
           <form
-            action=""
             onSubmit={() =>
               handleSubmitNewsletter({
                 name,
