@@ -41,7 +41,7 @@ const Container = styled.section`
   bottom: 0;
   right: 0;
   left: 0;
-  height: 90%;
+  height: 92%;
   display: flex;
   flex-direction: column;
   gap: 10px;

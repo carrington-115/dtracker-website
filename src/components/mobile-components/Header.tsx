@@ -53,7 +53,7 @@ export default function componentName() {
             : "none",
           background: scrolling ? "rgba(255, 255, 255, 0.50)" : "white",
           backdropFilter: "blur(10px)",
-          height: scrolling ? "10%" : "auto",
+          height: scrolling ? "8%" : "auto",
           right: 0,
           left: 0,
           top: 0,
