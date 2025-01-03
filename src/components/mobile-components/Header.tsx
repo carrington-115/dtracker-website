@@ -3,11 +3,13 @@
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { MenuLink } from "..";
 
 export default function componentName() {
   const [scrollPos, setScrollPos] = useState<number>(0);
   const [scrolling, setScrolling] = useState<boolean>(false);
   const [isClient, setIsClient] = useState<boolean>(false);
+  const [menuClicked, setMenuClicked] = useState<boolean>(false);
   const router = useRouter();
 
   const setSmoothNavigation = (linkId: string) => {
@@ -18,6 +20,13 @@ export default function componentName() {
     }
   };
 
+  const handleShowMenu = () => {
+    setMenuClicked(!menuClicked);
+  };
+
+  const handleCloseMenu = () => {
+    setMenuClicked(false);
+  };
   useEffect(() => {
     const handleScroll = () => {
       setScrollPos(window.scrollY);
@@ -34,25 +43,47 @@ export default function componentName() {
 
   if (!isClient) return null;
   return (
-    <Container
-      style={{
-        position: scrolling ? "fixed" : "relative",
-        transition: scrolling
-          ? "all 1s 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275)"
-          : "none",
-        background: scrolling ? "rgba(255, 255, 255, 0.50)" : "white",
-        backdropFilter: "blur(10px)",
-        right: 0,
-        left: 0,
-        top: 0,
-      }}
-    >
-      <img src="/images/full-logo.svg" alt="logo" />
-      <div className="menu-icon">
-        <span className="top" />
-        <span className="bottom" />
-      </div>
-    </Container>
+    <>
+      <MenuLink show={menuClicked} setShowFalse={handleCloseMenu} />
+      <Container
+        style={{
+          position: scrolling ? "fixed" : "relative",
+          transition: scrolling
+            ? "all 1s 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275)"
+            : "none",
+          background: scrolling ? "rgba(255, 255, 255, 0.50)" : "white",
+          backdropFilter: "blur(10px)",
+          height: scrolling ? "10%" : "auto",
+          right: 0,
+          left: 0,
+          top: 0,
+        }}
+      >
+        <img
+          src="/images/full-logo.svg"
+          alt="logo"
+          style={{ width: "138px" }}
+        />
+        <button className="menu-icon" type="button" onClick={handleShowMenu}>
+          <span
+            className="top"
+            style={{
+              transform: menuClicked ? "rotateZ(45deg)" : "none",
+              transition: "all 250ms 250ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+            }}
+          />
+          <span
+            className="bottom"
+            style={{
+              transform: menuClicked
+                ? "rotateZ(-45deg) translate(8px, -11px)"
+                : "none",
+              transition: "all 250ms 250ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+            }}
+          />
+        </button>
+      </Container>
+    </>
   );
 }
 
@@ -70,9 +101,11 @@ const Container = styled.header`
     gap: 10px;
     align-items: center;
     justify-content: center;
-    span {
-      width: 50px;
-      height: 5px;
+    span,
+    .top,
+    .bottom {
+      width: 35px;
+      height: 2.5px;
       background-color: black;
     }
   }

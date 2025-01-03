@@ -12,6 +12,7 @@ import WaitlistSection from "./WaitlistSection";
 import PartnerSection from "./PartnerSection";
 import DemoSection from "./DemoSection";
 import MobileHeader from "./mobile-components/Header";
+import MenuLink from "./mobile-components/MenuLinks";
 
 export {
   Buttons,
@@ -28,4 +29,5 @@ export {
   PartnerSection,
   DemoSection,
   MobileHeader,
+  MenuLink,
 };
