@@ -13,6 +13,7 @@ export default function componentName() {
             style={{
               ...textFontStyles.display.displayMediumBold,
               fontWeight: "bold",
+              textAlign: "center",
             }}
           >
             Proudly
