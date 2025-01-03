@@ -1,10 +1,23 @@
 "use client";
 
 import { colors, textFontStyles } from "@/styles";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 export default function componentName() {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+
+  const handleSubmitNewsletter = ({
+    name,
+    email,
+  }: {
+    name: string;
+    email: string;
+  }) => {
+    // do something
+  };
+
   return (
     <>
       <Container>
@@ -24,9 +37,20 @@ export default function componentName() {
               reliable and sustainable, and empower communities.
             </p>
           </div>
-          <form action="">
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
+          <form
+            action=""
+            onSubmit={() => handleSubmitNewsletter({ name, email })}
+          >
+            <input
+              type="text"
+              placeholder="Name"
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
             <input
               value="Join out Newsletter"
               type="submit"
