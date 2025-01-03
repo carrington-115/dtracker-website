@@ -4,7 +4,7 @@ import { valueContents } from "@/constants";
 import React from "react";
 import styled from "styled-components";
 import { ValuesElement } from ".";
-import { colors, textFontStyles } from "@/styles";
+import { colors } from "@/styles";
 
 export default function componentName() {
   return (

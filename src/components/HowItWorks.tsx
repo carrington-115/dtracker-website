@@ -110,5 +110,14 @@ const Container = styled.section`
     img {
       width: 85%;
     }
+    .content {
+      align-items: center;
+      .grid-steps {
+        column-gap: 10px;
+        .step-style {
+          gap: 10px;
+        }
+      }
+    }
   }
 `;
