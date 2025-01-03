@@ -35,4 +35,10 @@ const Container = styled.section`
     padding: 30px;
     border-radius: 20px;
   }
+
+  @media (min-width: 320px) and (max-width: 599px) {
+    div {
+      padding: 30px 15px;
+    }
+  }
 `;

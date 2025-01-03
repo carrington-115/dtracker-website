@@ -56,6 +56,7 @@ const Container = styled.section`
       grid-template-columns: repeat(2, 1fr);
       width: 90%;
       row-gap: 20px;
+      column-gap: 10px;
       column-gap: auto;
     }
   }
