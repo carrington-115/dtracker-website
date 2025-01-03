@@ -21,7 +21,7 @@ export default function componentName() {
           >
             Join the Waitlist
           </h3>
-          <p style={{ ...textFontStyles.title.titleLargeRegular }}>
+          <p className="text-presentation">
             Revolutionize waste management in your community. DTRACKER is your
             all-in-one solution for simplifying trash disposal and promoting
             sustainability.
@@ -29,26 +29,14 @@ export default function componentName() {
           <ul>
             <p
               style={{
-                ...textFontStyles.title.titleLargeRegular,
-                fontWeight: "bold",
                 margin: "5px 0px",
               }}
             >
               Why join the waitlist:
             </p>
-            <li
-              style={{
-                ...textFontStyles.title.titleLargeRegular,
-              }}
-            >
-              Early Access to Our Platform
-            </li>
-            <li style={{ ...textFontStyles.title.titleLargeRegular }}>
-              Exclusive Updates
-            </li>
-            <li style={{ ...textFontStyles.title.titleLargeRegular }}>
-              A Greener Future
-            </li>
+            <li>Early Access to Our Platform</li>
+            <li>Exclusive Updates</li>
+            <li>A Greener Future</li>
           </ul>
           <section className="btn-container">
             <Buttons
@@ -79,7 +67,6 @@ const Container = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: ${colors.onPrimaryContainer};
 
     .content {
       display: flex;
@@ -88,11 +75,18 @@ const Container = styled.section`
       ul {
         li {
           list-style-type: disc;
+          font-size: 20px;
+        }
+        p {
+          font-size: 21px;
         }
       }
       .btn-container {
-        margin: "10px 0px";
+        margin: 15px 0px;
         width: 100%;
+      }
+      .text-presentation {
+        font-size: 20px;
       }
     }
   }
