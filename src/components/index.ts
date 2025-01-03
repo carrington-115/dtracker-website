@@ -13,6 +13,7 @@ import PartnerSection from "./PartnerSection";
 import DemoSection from "./DemoSection";
 import MobileHeader from "./mobile-components/Header";
 import MenuLink from "./mobile-components/MenuLinks";
+import Newsletter from "./Newsletter";
 
 export {
   Buttons,
@@ -30,4 +31,5 @@ export {
   DemoSection,
   MobileHeader,
   MenuLink,
+  Newsletter,
 };

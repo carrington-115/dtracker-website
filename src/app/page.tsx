@@ -7,6 +7,7 @@ import {
   Hero,
   MobileHeader,
   MoneySection,
+  Newsletter,
   PartnerSection,
   ValuesSection,
   WaitlistSection,
@@ -26,6 +27,7 @@ export default function Home() {
       <WaitlistSection />
       <PartnerSection />
       <DemoSection />
+      <Newsletter />
     </Container>
   );
 }
