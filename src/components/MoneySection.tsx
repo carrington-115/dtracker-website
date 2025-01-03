@@ -9,7 +9,7 @@ import { MoneyComponent } from ".";
 export default function componentName() {
   return (
     <>
-      <Container className="money-section">
+      <Container id="agents" className="money-section">
         <h1
           style={{
             fontWeight: "bold",
