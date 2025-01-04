@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Buttons } from ".";
 import { colors, textFontStyles } from "@/styles";
 import { useRouter } from "next/navigation";
+import { handleBookDemo } from "@/functions.config";
 
 export default function componentName() {
   const router = useRouter();
@@ -40,7 +41,7 @@ export default function componentName() {
               fgColor="white"
               hbgColor={colors.onPrimaryContainer}
               hfgColor="white"
-              action={() => router.push("/#waitlist")}
+              action={() => handleBookDemo()}
             />
           </div>
           <img src="/images/demo.png" alt="demo image" />

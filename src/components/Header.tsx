@@ -7,6 +7,7 @@ import { headerLinks } from "@/constants";
 import { Buttons } from ".";
 import { useRouter, usePathname } from "next/navigation";
 import { colors } from "@/styles";
+import { handleBookDemo, handleOpenWaitlist } from "@/functions.config";
 
 export default function componentName() {
   const [scrollPos, setScrollPos] = useState<number>(0);
@@ -69,7 +70,7 @@ export default function componentName() {
             name: "Join the Waitlist",
             fgColor: colors.onPrimaryContainer,
             bgColor: "transparent",
-            action: () => router.push("/"),
+            action: () => handleOpenWaitlist(),
             hbgColor: colors.primaryContainer,
             hfgColor: colors.onPrimaryContainer,
           },
@@ -77,7 +78,7 @@ export default function componentName() {
             name: "Book a Demo",
             fgColor: "#ffffff",
             bgColor: colors.primaryColor,
-            action: () => router.push("/"),
+            action: () => handleBookDemo(),
             hbgColor: colors.onPrimaryContainer,
             hfgColor: "#ffffff",
           },

@@ -5,6 +5,7 @@ import React from "react";
 import styled from "styled-components";
 import { Buttons } from ".";
 import { useRouter } from "next/navigation";
+import { handleOpenWaitlist } from "@/functions.config";
 
 export default function componentName() {
   const router = useRouter();
@@ -45,7 +46,7 @@ export default function componentName() {
               fgColor="white"
               hbgColor={colors.onPrimaryContainer}
               hfgColor="white"
-              action={() => router.push("/#waitlist")}
+              action={() => handleOpenWaitlist()}
             />
           </section>
         </div>

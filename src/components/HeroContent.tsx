@@ -4,9 +4,11 @@ import styled from "styled-components";
 import { Buttons } from ".";
 import { colors, textFontStyles } from "@/styles";
 import { useRouter } from "next/navigation";
+import { handleBookDemo, handleOpenWaitlist } from "@/functions.config";
 
 export default function componentName() {
   const router = useRouter();
+
   return (
     <Container>
       <div className="content">
@@ -27,7 +29,7 @@ export default function componentName() {
             name: "Book a Demo",
             fgColor: "#ffffff",
             bgColor: colors.primaryColor,
-            action: () => router.push("/"),
+            action: () => handleBookDemo(),
             hbgColor: colors.onPrimaryContainer,
             hfgColor: "#ffffff",
           },
@@ -35,7 +37,7 @@ export default function componentName() {
             name: "Join the Waitlist",
             fgColor: colors.onPrimaryContainer,
             bgColor: colors.TextureContainerColor,
-            action: () => router.push("/"),
+            action: () => handleOpenWaitlist(),
             hbgColor: colors.primaryContainer,
             hfgColor: colors.onPrimaryContainer,
           },
