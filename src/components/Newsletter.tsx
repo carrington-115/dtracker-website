@@ -1,36 +1,93 @@
 "use client";
 
 import { colors, textFontStyles } from "@/styles";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { setDoc, doc, getFirestore, serverTimestamp } from "firebase/firestore";
+import { doc, setDoc, getFirestore, serverTimestamp } from "firebase/firestore";
 import app from "@/firebase/firebase.config";
+import { useRouter } from "next/navigation";
 
 export default function componentName() {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
+  const [check, setCheck] = useState<{
+    name: boolean;
+    email: boolean;
+    submitted: boolean;
+  }>({
+    name: true,
+    email: true,
+    submitted: false,
+  });
   const db = getFirestore(app);
-  const subscribersList = doc(db, "subscribers");
+  const router = useRouter();
 
-  const handleSubmitNewsletter = async ({
-    name,
-    email,
-    timeStamp,
-  }: {
-    name: string;
-    email: string;
-    timeStamp?: any;
-  }) => {
+  const handleSubmitNewsletter = async (event: any) => {
     try {
-      await setDoc(
-        subscribersList,
-        { name, email, timeStamp },
-        { merge: true }
-      );
+      event.preventDefault();
+      if (email === "" && name === "") {
+        setCheck((prev) => {
+          return {
+            ...prev,
+            email: false,
+            name: false,
+          };
+        });
+
+        throw new Error("Email and name field is empty");
+      } else if (name === "" && email !== "") {
+        setCheck((prev) => {
+          return {
+            ...prev,
+            name: true,
+          };
+        });
+        throw new Error("name field is empty");
+      } else if (name !== "" && email === "") {
+        setCheck((prev) => {
+          return {
+            ...prev,
+            email: false,
+          };
+        });
+      } else {
+        const subscribersList = doc(db, "subscribers", `${name}`);
+        await setDoc(subscribersList, {
+          name,
+          email,
+        });
+        setCheck((prev) => {
+          return {
+            ...prev,
+            submitted: true,
+          };
+        });
+        if (window !== undefined) window.location.reload();
+      }
     } catch (e) {
       console.error(e);
     }
   };
+
+  useEffect(() => {
+    if (name !== "") {
+      setCheck((prev) => {
+        return {
+          ...prev,
+          name: true,
+        };
+      });
+    }
+
+    if (email !== "") {
+      setCheck((prev) => {
+        return {
+          ...prev,
+          email: true,
+        };
+      });
+    }
+  }, [name, email, check]);
 
   return (
     <>
@@ -51,29 +108,32 @@ export default function componentName() {
               reliable and sustainable, and empower communities.
             </p>
           </div>
-          <form
-            onSubmit={() =>
-              handleSubmitNewsletter({
-                name,
-                email,
-                timeStamp: serverTimestamp,
-              })
-            }
-          >
+          <form onSubmit={handleSubmitNewsletter}>
             <input
+              style={{
+                borderColor:
+                  check.name === false ? "red" : "rgba(153, 153, 153, 1)",
+              }}
               type="text"
               placeholder="Name"
               onChange={(e) => setName(e.target.value)}
+              required
             />
             <input
+              style={{
+                borderColor:
+                  check.email === false ? "red" : "rgba(153, 153, 153, 1)",
+              }}
               type="email"
               placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
             <input
               value="Join out Newsletter"
               type="submit"
               className="form-btn"
+              required
             />
           </form>
         </section>
